@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@layer utilities {
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes navbar-slide-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-navbar-slide-down {
+        animation: navbar-slide-down 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #ffffff;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
