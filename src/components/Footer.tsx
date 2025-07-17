@@ -72,14 +72,9 @@ export default function Footer() {
           >
             <Github className="w-5 h-5 hover:text-gray-900 transition-colors" />
           </Link>
-          <Link
-            href="https://github.com/amoraru/modshop"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
+          <div>
             <p>CÔNG TY TNHH PERVASEL</p>
-          </Link>
+          </div>
         </div>
 
         {/* Right: Version */}
